@@ -3,9 +3,9 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+//var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-
+//plugins: [new BundleAnalyzerPlugin()]
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -22,10 +22,6 @@ module.exports = {
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
   },
-  plugins: [new BundleAnalyzerPlugin()],
-  /*plugins: [
-    new BundleTracker({filename: './var/webpack-stats.json'}),
-  ],*/
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
